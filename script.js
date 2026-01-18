@@ -17,7 +17,7 @@ btn.onclick = () => {
   addMessage(msg, "user");
   input.value = "";
 
-  fetch("https://ai-healthcare-backend-omtx.onrender.com/chat", {
+  fetch("https://ai-healthcare-backend-emtx.onrender.com/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
