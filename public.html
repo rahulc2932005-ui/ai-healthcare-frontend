@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +32,7 @@
 
   <script>
     async function loadData() {
-      const res = await fetch("http://127.0.0.1:5000/public-data");
+      const res = await fetch("https://ai-healthcare-backend-omtx.onrender.com/public-data");
       const data = await res.json();
       const div = document.getElementById("data");
       div.innerHTML = "";
@@ -54,60 +53,3 @@
   </script>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Public Chat Data</title>
-  <style>
-    body {
-      font-family: Arial;
-      background: #f2f2f2;
-    }
-    h2 {
-      text-align: center;
-    }
-    .box {
-      background: white;
-      margin: 10px auto;
-      padding: 10px;
-      width: 80%;
-      border-radius: 6px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .time {
-      color: gray;
-      font-size: 12px;
-      margin-top: 5px;
-    }
-  </style>
-</head>
-<body>
-  <h2>Public Chat Data</h2>
-  <div id="data"></div>
-
-  <script>
-    async function loadData() {
-      const res = await fetch("http://127.0.0.1:5000/public-data");
-      const data = await res.json();
-      const div = document.getElementById("data");
-      div.innerHTML = "";
-
-      data.forEach(d => {
-        div.innerHTML += `
-          <div class="box">
-            <b>User:</b> ${d.user}<br>
-            <b>Bot:</b> ${d.bot}<br>
-            <div class="time">${d.time}</div>
-          </div>
-        `;
-      });
-    }
-
-    loadData();
-    setInterval(loadData, 3000); // refresh every 3 seconds
-  </script>
-</body>
-</html>
->>>>>>> 1832fbd6688f11a4d644c72b907b88b23182600c
